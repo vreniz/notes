@@ -82,4 +82,20 @@ This flow ensures:
 ### 🚀 Notes
 
 - This process is part of the main loop, meaning it repeats until the user exits the system.
-- All validations are handled in the `main.py` file using reusable functions.
+- All validations are handled in the `main.py` file using reusable functions
+(START)
+   ↓
+[Show Menu]
+   ↓
+[Read Option]
+   ↓
+   ◇ Option?
+   ↓ ↓ ↓ ↓ ↓ ↓
+ 1   2   3   4   5   6
+ ↓   ↓   ↓   ↓   ↓   ↓
+Proc Proc Proc Proc Proc End
+ ↓   ↓   ↓   ↓   ↓
+Print Print Print Print Print
+ ↓
+Back to Menu
+.
