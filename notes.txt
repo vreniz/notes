@@ -1,1 +1,85 @@
 
+## 🔄 Flowchart – Option 1: Register Student
+
+This section describes the process flow for registering a new student in the system.
+
+---
+
+### 🎯 Objective
+
+To collect student data, validate it, store it in the system, and confirm the operation to the user.
+
+---
+
+### 🧠 Flow Description
+
+1. **Start**
+   - The process begins when the user selects option `1` from the menu.
+
+2. **Input Data (Parallelogram)**
+   - The system requests:
+     - Student ID
+     - Name
+     - Age
+     - Program
+
+3. **Validation (Process)**
+   - The system validates:
+     - ID is a positive integer
+     - Name is not empty and not only numbers
+     - Age is a positive integer
+     - Program is valid text
+
+4. **Create Student (Process)**
+   - The system calls:
+     ```python
+     create_student(data)
+     ```
+   - It verifies that the ID does not already exist.
+
+5. **Decision (Diamond)**
+   - Was the student created successfully?
+
+   - **Yes →**
+     - Display success message:
+       ```
+       Student registered successfully.
+       ```
+
+   - **No →**
+     - Display error message:
+       ```
+       Error: Student ID already exists.
+       ```
+
+6. **Return to Menu**
+   - The system loops back to the main menu.
+
+---
+
+### 🔷 Flowchart Symbols Used
+
+| Symbol | Meaning |
+|-------|--------|
+| 🔵 Oval | Start / End |
+| 🟪 Parallelogram | Input / Output |
+| ⬜ Rectangle | Process |
+| 🔷 Diamond | Decision |
+
+---
+
+### 📌 Summary
+
+This flow ensures:
+
+- Valid and clean data input  
+- Prevention of duplicate student IDs  
+- Clear feedback to the user  
+- Integration with the main system loop  
+
+---
+
+### 🚀 Notes
+
+- This process is part of the main loop, meaning it repeats until the user exits the system.
+- All validations are handled in the `main.py` file using reusable functions.
